@@ -33,104 +33,103 @@ man whoami</code></pre>
     <div class="alert alert-info mt-4" role="alert">
       These commands help you understand basic system information in Linux and Ubuntu.
     </div>
-  </div>
- <!-- Topic 2 -->
- <div class="card mb-5">
-  <div class="card-header bg-success text-white">✅ 2. Linux File System Hierarchy</div>
-  <div class="card-body">
-    <p><strong>📘 What is the Linux File System Hierarchy?</strong></p>
-    <p>In Linux, everything is organized into a single-rooted hierarchical tree starting from <code>/</code> (root directory).</p>
+     <!-- Topic 2 -->
+     <div class="card mb-5">
+      <div class="card-header bg-success text-white">✅ 2. Linux File System Hierarchy</div>
+      <div class="card-body">
+        <p><strong>📘 What is the Linux File System Hierarchy?</strong></p>
+        <p>In Linux, everything is organized into a single-rooted hierarchical tree starting from <code>/</code> (root directory).</p>
 
-    <h5>Important Directories:</h5>
-    <div class="table-responsive">
-      <table class="table table-bordered">
-        <thead class="table-secondary">
-          <tr>
-            <th>Directory</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>/</td><td>Root directory (top of the hierarchy)</td></tr>
-          <tr><td>/home</td><td>Contains user home directories (e.g., /home/dirushan)</td></tr>
-          <tr><td>/bin</td><td>Essential system binaries (commands like ls, cat)</td></tr>
-          <tr><td>/sbin</td><td>System binaries for admin (like reboot, shutdown)</td></tr>
-          <tr><td>/etc</td><td>System-wide configuration files</td></tr>
-          <tr><td>/usr</td><td>User-installed software and libraries</td></tr>
-          <tr><td>/var</td><td>Variable data (logs, mail, spool)</td></tr>
-          <tr><td>/tmp</td><td>Temporary files (auto-deleted on reboot)</td></tr>
-          <tr><td>/dev</td><td>Device files (like /dev/sda)</td></tr>
-          <tr><td>/proc</td><td>Virtual filesystem for process information</td></tr>
-          <tr><td>/lib, /lib64</td><td>Essential shared libraries</td></tr>
-          <tr><td>/opt</td><td>Optional third-party software</td></tr>
-          <tr><td>/boot</td><td>Bootloader and kernel files</td></tr>
-        </tbody>
-      </table>
-    </div>
+        <h5>Important Directories:</h5>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead class="table-secondary">
+              <tr>
+                <th>Directory</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>/</td><td>Root directory (top of the hierarchy)</td></tr>
+              <tr><td>/home</td><td>Contains user home directories (e.g., /home/dirushan)</td></tr>
+              <tr><td>/bin</td><td>Essential system binaries (commands like ls, cat)</td></tr>
+              <tr><td>/sbin</td><td>System binaries for admin (like reboot, shutdown)</td></tr>
+              <tr><td>/etc</td><td>System-wide configuration files</td></tr>
+              <tr><td>/usr</td><td>User-installed software and libraries</td></tr>
+              <tr><td>/var</td><td>Variable data (logs, mail, spool)</td></tr>
+              <tr><td>/tmp</td><td>Temporary files (auto-deleted on reboot)</td></tr>
+              <tr><td>/dev</td><td>Device files (like /dev/sda)</td></tr>
+              <tr><td>/proc</td><td>Virtual filesystem for process information</td></tr>
+              <tr><td>/lib, /lib64</td><td>Essential shared libraries</td></tr>
+              <tr><td>/opt</td><td>Optional third-party software</td></tr>
+              <tr><td>/boot</td><td>Bootloader and kernel files</td></tr>
+            </tbody>
+          </table>
+        </div>
 
-    <p class="mt-4">📌 <strong>Tip:</strong> Use <code>ls</code> to explore these directories.</p>
+        <p class="mt-4">📌 <strong>Tip:</strong> Use <code>ls</code> to explore these directories.</p>
 
-    <pre><code>ls /
+        <pre><code>ls /
 ls /etc
 ls /home</code></pre>
 
-    <h5>🛠️ Tasks to Do:</h5>
-    <p>🧪 <strong>Task 1: Explore the File System</strong></p>
-    <pre><code>tree -L 2 /       # Shows a tree structure of root (install with: sudo apt install tree)
+        <h5>🛠️ Tasks to Do:</h5>
+        <p>🧪 <strong>Task 1: Explore the File System</strong></p>
+        <pre><code>tree -L 2 /       # Shows a tree structure of root (install with: sudo apt install tree)
 ls -l /           # Lists contents of root directory with details
 du -sh /*         # Shows space usage of top-level directories</code></pre>
 
-    <p>🧪 <strong>Task 2: Check What’s in These:</strong></p>
-    <pre><code>ls /etc
+        <p>🧪 <strong>Task 2: Check What’s in These:</strong></p>
+        <pre><code>ls /etc
 ls /var/log
 ls /home
 ls /boot</code></pre>
 
-    <p><strong>Answer These:</strong></p>
-    <ul>
-      <li>What type of files are in <code>/etc</code>?</li>
-      <li>What is inside <code>/var/log</code>?</li>
-    </ul>
-  </div>
-</div>
-
-<!-- Topic 3 -->
-<div class="card mb-5">
-  <div class="card-header bg-info text-white">✅ 3. Navigating the Terminal (CLI)</div>
-  <div class="card-body">
-    <p><strong>📘 What is the Terminal / Command Line Interface (CLI)?</strong></p>
-    <p>The terminal lets you interact with your Ubuntu system using commands instead of a GUI.</p>
-    <ul>
-      <li>Navigate the file system</li>
-      <li>Run scripts</li>
-      <li>Install and update software</li>
-      <li>Automate tasks</li>
-    </ul>
-
-    <h5>🔑 Common Navigation Commands:</h5>
-    <div class="table-responsive">
-      <table class="table table-bordered">
-        <thead class="table-secondary">
-          <tr>
-            <th>Command</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>pwd</td><td>Print current directory</td></tr>
-          <tr><td>ls</td><td>List contents of a directory</td></tr>
-          <tr><td>cd</td><td>Change directory</td></tr>
-          <tr><td>clear</td><td>Clear terminal screen</td></tr>
-          <tr><td>exit</td><td>Close the terminal session</td></tr>
-          <tr><td>echo</td><td>Print text to terminal</td></tr>
-          <tr><td>history</td><td>Show previously run commands</td></tr>
-          <tr><td>man &lt;command&gt;</td><td>Show manual page for a command</td></tr>
-        </tbody>
-      </table>
+        <p><strong>Answer These:</strong></p>
+        <ul>
+          <li>What type of files are in <code>/etc</code>?</li>
+          <li>What is inside <code>/var/log</code>?</li>
+        </ul>
+      </div>
     </div>
 
-    <h5>📁 Examples:</h5>
-    <pre><code>pwd                     # Shows current directory
+    <!-- Topic 3 -->
+    <div class="card mb-5">
+      <div class="card-header bg-info text-white">✅ 3. Navigating the Terminal (CLI)</div>
+      <div class="card-body">
+        <p><strong>📘 What is the Terminal / Command Line Interface (CLI)?</strong></p>
+        <p>The terminal lets you interact with your Ubuntu system using commands instead of a GUI.</p>
+        <ul>
+          <li>Navigate the file system</li>
+          <li>Run scripts</li>
+          <li>Install and update software</li>
+          <li>Automate tasks</li>
+        </ul>
+
+        <h5>🔑 Common Navigation Commands:</h5>
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead class="table-secondary">
+              <tr>
+                <th>Command</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>pwd</td><td>Print current directory</td></tr>
+              <tr><td>ls</td><td>List contents of a directory</td></tr>
+              <tr><td>cd</td><td>Change directory</td></tr>
+              <tr><td>clear</td><td>Clear terminal screen</td></tr>
+              <tr><td>exit</td><td>Close the terminal session</td></tr>
+              <tr><td>echo</td><td>Print text to terminal</td></tr>
+              <tr><td>history</td><td>Show previously run commands</td></tr>
+              <tr><td>man &lt;command&gt;</td><td>Show manual page for a command</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h5>📁 Examples:</h5>
+        <pre><code>pwd                     # Shows current directory
 cd /etc                 # Navigate to /etc directory
 ls                      # List files in current directory
 ls -l                   # Long listing with permissions
@@ -139,29 +138,31 @@ cd ~                    # Go to home directory
 cd ..                   # Move one directory up
 clear                   # Clears the terminal</code></pre>
 
-    <p class="mt-4">🧠 <strong>Tip:</strong> Use <kbd>TAB</kbd> for auto-complete and <kbd>UP ARROW</kbd> to repeat previous commands.</p>
+        <p class="mt-4">🧠 <strong>Tip:</strong> Use <kbd>TAB</kbd> for auto-complete and <kbd>UP ARROW</kbd> to repeat previous commands.</p>
 
-    <h5 class="mt-4">🛠️ Tasks to Do:</h5>
-    <p>🧪 <strong>Task 1: Navigate Around</strong></p>
-    <pre><code>pwd
+        <h5 class="mt-4">🛠️ Tasks to Do:</h5>
+        <p>🧪 <strong>Task 1: Navigate Around</strong></p>
+        <pre><code>pwd
 cd /
 ls
 cd /etc
 ls -al
 cd ~</code></pre>
 
-    <p>🧪 <strong>Task 2: Bonus Terminal Skills</strong></p>
-    <pre><code>echo "Hello Dirushan 👋"
+        <p>🧪 <strong>Task 2: Bonus Terminal Skills</strong></p>
+        <pre><code>echo "Hello Dirushan 👋"
 history | tail -10
 man ls</code></pre>
+      </div>
+    </div>
+
+    <div class="text-center mb-4">
+      <a href="#" class="btn btn-primary btn-lg">✅ Ready for Topic 4: File & Directory Management</a>
+    </div>
+    
   </div>
-</div>
+  </div>
 
-<div class="text-center mb-4">
-  <a href="#" class="btn btn-primary btn-lg">✅ Ready for Topic 4: File & Directory Management</a>
-</div>
-
-</div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
